@@ -37,8 +37,8 @@
     <meta name="generator" content="Framer 3df86f7">
     <title>better</title>
     <meta name="description" content="betterprogrammer პროგრამირება ასეთი მარტივი არასდროს ყოფილა">
-    <meta name="framer-search-index" content="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/searchIndex-Qf7DRJbwqgnp.json">
-    <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/searchIndex-kUrfhblXHrn1.json">
+    <meta name="framer-search-index" content="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/searchIndex-4BFice3aEZUj.json">
+    <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/searchIndex-IaNMv6FT4rxr.json">
     <link href="https://framerusercontent.com/images/vIQjMQPeeaNc5PEMMxdiHjVUKjA.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="https://framerusercontent.com/images/vIQjMQPeeaNc5PEMMxdiHjVUKjA.png" rel="icon" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/vIQjMQPeeaNc5PEMMxdiHjVUKjA.png">
@@ -4008,7 +4008,7 @@
   <body>
     <script async src="https://events.framer.com/script?v=2" data-fid="3eda621fbe6c1eeca529275e49c54fed8f8bb0096444e53e51700fca28911cdb" data-no-nt></script>
 
-    <div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;72rtr7&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;1qudeud&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;1iw78hq&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;}]}" data-framer-ssr-released-at="2025-11-03T00:39:39.967Z" data-framer-page-optimized-at="2025-11-03T19:53:42.144Z" data-framer-generated-page>
+    <div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;72rtr7&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;1qudeud&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;1iw78hq&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;}]}" data-framer-ssr-released-at="2025-11-03T00:39:39.967Z" data-framer-page-optimized-at="2025-11-03T20:48:18.468Z" data-framer-generated-page>
       <style data-framer-html-style>
         html body {
           background: var(--token-6bde8871-2731-4152-b329-21f66bb44d1d, rgb(20, 20, 20));
@@ -5746,7 +5746,17 @@
                 border: 1px solid #262637;
                 background: #1b1c27;
                 color: #fff;
-                font-weight: 700
+                font-weight: 700;
+                transition: all 0.2s;
+              }
+
+              .btn:hover {
+                opacity: 0.9;
+              }
+
+              .btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
               }
 
               .btn-primary {
@@ -5773,63 +5783,35 @@
                 border-radius: 12px;
                 color: #fff;
                 font-size: 16px;
+                outline: none;
+                transition: border-color 0.2s;
+              }
+
+              .input:focus {
+                border-color: var(--accent);
               }
 
               .h1 {
                 font-weight: 900;
                 margin: 0 0 10px 0;
-
-                font-size: $ {
-                  isMobile ? &quot;
-                  28px&quot;
-                  : &quot;
-                  clamp(24px, 4.2vw, 44px)&quot;
-                }
-
-                ;
-                line-height:1.15;
-                letter-spacing:.1px;
+                font-size: clamp(24px, 4.2vw, 44px);
+                line-height: 1.15;
+                letter-spacing: .1px;
               }
 
               .container {
-                max-width:$ {
-                  isMobile ? &quot;
-                  520px&quot;
-                  : &quot;
-                  1100px&quot;
-                }
-
-                ;
-                width:100%;
+                max-width: 1100px;
+                width: 100%;
               }
 
               .lead {
-                font-size: $ {
-                  isMobile ? &quot;
-                  15px&quot;
-                  : &quot;
-                  clamp(14px, 1.6vw, 18px)&quot;
-                }
+                font-size: clamp(14px, 1.6vw, 18px)
               }
 
               .grid {
                 display: grid;
-
-                grid-template-columns: $ {
-                  isMobile ? &quot;
-                  1fr&quot;
-                  : &quot;
-                  1fr 1fr&quot;
-                }
-
-                ;
-
-                gap:$ {
-                  isMobile ? &quot;
-                  12px&quot;
-                  : &quot;
-                  16px&quot;
-                }
+                grid-template-columns: 1fr 1fr;
+                gap: 16px
               }
 
               .mobile-card {
@@ -5844,12 +5826,44 @@
                 bottom: 8px;
                 z-index: 2
               }
+
+              .warning-badge {
+                background: #f59e0b;
+                color: #000;
+                padding: 4px 8px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 700;
+              }
+
+              .admin-login {
+                background: rgba(124, 58, 237, 0.1);
+                border: 1px solid var(--accent);
+              }
+
+              .error-message {
+                background: rgba(220, 38, 38, 0.1);
+                border: 1px solid #dc2626;
+                color: #f87171;
+                padding: 12px;
+                border-radius: 10px;
+                margin-top: 16px;
+              }
+
+              .success-message {
+                background: rgba(22, 163, 74, 0.1);
+                border: 1px solid #16a34a;
+                color: #4ade80;
+                padding: 12px;
+                border-radius: 10px;
+                margin-top: 16px;
+              }
             </style>
             <div class="wl container" style="text-align:center">
               <div style="display:inline-block;margin-bottom:14px"><span class="card soft muted" style="padding:6px 12px;border-radius:999px;font-size:12px">სიახლეები</span></div>
               <div class="h1">დარეგისტრირდი BetterProgrammer-ის განახლებების სიაში და მიიღე შეტყობინებები ყოველთვის</div>
               <div class="muted lead">არასოდეს გამოტოვო ფასდაკლებები და სიახლეები</div>
-              <div style="max-width:520px;margin:20px auto 0;display:grid;gap:10px"><input class="input" type="text" placeholder="👤 თქვენი სახელი" value><input class="input" type="email" placeholder="📧 თქვენი ელ-ფოსტა" value><button class="btn btn-grad">✉️ მიიღე განახლებები</button></div>
+              <div style="max-width:520px;margin:20px auto 0;display:grid;gap:10px"><input class="input" type="text" placeholder="👤 თქვენი სახელი" value><input class="input" type="email" placeholder="📧 თქვენი ელ-ფოსტა" value><button class="btn btn-grad">✉️ მიიღე განახლებები</button><button class="btn btn-ghost" style="margin-top:8px">🔐 ადმინის პანელი</button></div>
               <p class="muted" style="font-size:12px;margin-top:12px">🔒 თქვენი მონაცემები დაცულია და არ გადაეცემა მესამე პირებს</p>
             </div>
           </div>
@@ -5947,7 +5961,17 @@
                 border: 1px solid #262637;
                 background: #1b1c27;
                 color: #fff;
-                font-weight: 700
+                font-weight: 700;
+                transition: all 0.2s;
+              }
+
+              .btn:hover {
+                opacity: 0.9;
+              }
+
+              .btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
               }
 
               .btn-primary {
@@ -5974,63 +5998,35 @@
                 border-radius: 12px;
                 color: #fff;
                 font-size: 16px;
+                outline: none;
+                transition: border-color 0.2s;
+              }
+
+              .input:focus {
+                border-color: var(--accent);
               }
 
               .h1 {
                 font-weight: 900;
                 margin: 0 0 10px 0;
-
-                font-size: $ {
-                  isMobile ? &quot;
-                  28px&quot;
-                  : &quot;
-                  clamp(24px, 4.2vw, 44px)&quot;
-                }
-
-                ;
-                line-height:1.15;
-                letter-spacing:.1px;
+                font-size: clamp(24px, 4.2vw, 44px);
+                line-height: 1.15;
+                letter-spacing: .1px;
               }
 
               .container {
-                max-width:$ {
-                  isMobile ? &quot;
-                  520px&quot;
-                  : &quot;
-                  1100px&quot;
-                }
-
-                ;
-                width:100%;
+                max-width: 1100px;
+                width: 100%;
               }
 
               .lead {
-                font-size: $ {
-                  isMobile ? &quot;
-                  15px&quot;
-                  : &quot;
-                  clamp(14px, 1.6vw, 18px)&quot;
-                }
+                font-size: clamp(14px, 1.6vw, 18px)
               }
 
               .grid {
                 display: grid;
-
-                grid-template-columns: $ {
-                  isMobile ? &quot;
-                  1fr&quot;
-                  : &quot;
-                  1fr 1fr&quot;
-                }
-
-                ;
-
-                gap:$ {
-                  isMobile ? &quot;
-                  12px&quot;
-                  : &quot;
-                  16px&quot;
-                }
+                grid-template-columns: 1fr 1fr;
+                gap: 16px
               }
 
               .mobile-card {
@@ -6045,12 +6041,44 @@
                 bottom: 8px;
                 z-index: 2
               }
+
+              .warning-badge {
+                background: #f59e0b;
+                color: #000;
+                padding: 4px 8px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 700;
+              }
+
+              .admin-login {
+                background: rgba(124, 58, 237, 0.1);
+                border: 1px solid var(--accent);
+              }
+
+              .error-message {
+                background: rgba(220, 38, 38, 0.1);
+                border: 1px solid #dc2626;
+                color: #f87171;
+                padding: 12px;
+                border-radius: 10px;
+                margin-top: 16px;
+              }
+
+              .success-message {
+                background: rgba(22, 163, 74, 0.1);
+                border: 1px solid #16a34a;
+                color: #4ade80;
+                padding: 12px;
+                border-radius: 10px;
+                margin-top: 16px;
+              }
             </style>
             <div class="wl container" style="text-align:center">
               <div style="display:inline-block;margin-bottom:14px"><span class="card soft muted" style="padding:6px 12px;border-radius:999px;font-size:12px">სიახლეები</span></div>
               <div class="h1">დარეგისტრირდი BetterProgrammer-ის განახლებების სიაში და მიიღე შეტყობინებები ყოველთვის</div>
               <div class="muted lead">არასოდეს გამოტოვო ფასდაკლებები და სიახლეები</div>
-              <div style="max-width:520px;margin:20px auto 0;display:grid;gap:10px"><input class="input" type="text" placeholder="👤 თქვენი სახელი" value><input class="input" type="email" placeholder="📧 თქვენი ელ-ფოსტა" value><button class="btn btn-grad">✉️ მიიღე განახლებები</button></div>
+              <div style="max-width:520px;margin:20px auto 0;display:grid;gap:10px"><input class="input" type="text" placeholder="👤 თქვენი სახელი" value><input class="input" type="email" placeholder="📧 თქვენი ელ-ფოსტა" value><button class="btn btn-grad">✉️ მიიღე განახლებები</button><button class="btn btn-ghost" style="margin-top:8px">🔐 ადმინის პანელი</button></div>
               <p class="muted" style="font-size:12px;margin-top:12px">🔒 თქვენი მონაცემები დაცულია და არ გადაეცემა მესამე პირებს</p>
             </div>
           </div>
@@ -7104,17 +7132,17 @@
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/rolldown-runtime.I8hAdsGi.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/framer.SNM9TM_8.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/motion.wPVZDdr9.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/V4F9JR99R5IYHUKqpRdquBqR7mq_-3Np_X3x4KHIMN8.CVD2uCMG.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/V4F9JR99R5IYHUKqpRdquBqR7mq_-3Np_X3x4KHIMN8.DqylalCR.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/shared-lib.BlS1zQTb.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/augiA20Il.CI8qZIOB.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/OkfJSdLiL.DsSG4v69.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/Code.DkyOQd8B.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/Renewfunc.DSkfX9c_.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/Renewfunc.BRep2De_.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/cFoLPZvQn.bBWYMit7.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/Jqw6egZuR.ClGKE6OJ.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/UrMGXKmhm.nkZQce-w.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/script_main.CvXn5XTF.mjs">
-    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/script_main.CvXn5XTF.mjs"></script>
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/script_main.B7mZpGxo.mjs">
+    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/3JsgvwUGwf4O6jB8iNFkcc/script_main.B7mZpGxo.mjs"></script>
     <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg886411915_1035">
         <g opacity="0.6">
